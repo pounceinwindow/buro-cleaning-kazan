@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Проект страницы Buro Cleaning. Уборка квартир, домов и офисов, мытьё окон и химчистка в Казани.">
+  <meta name="theme-color" content="#f5f8f2">
+  <title>Buro Cleaning — уборка в Казани</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="header wrap">
+    <a class="brand" href="#main" aria-label="Buro Cleaning — начало страницы">buro<span>.</span></a>
+    <p class="header-location">Клининг в Казани</p>
+    <nav aria-label="Навигация по странице">
+      <a href="#services">Услуги</a>
+      <a href="https://t.me/buro_cleaning" target="_blank" rel="noopener noreferrer">Telegram <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="intro">
+      <div class="hero-copy">
+        <h1 id="intro">Уборка для дома и&nbsp;офиса</h1>
+        <p>Генеральная, регулярная или после ремонта. Опишите задачу, чтобы обсудить стоимость с&nbsp;Buro Cleaning.</p>
+        <a class="button button-dark" href="#request">Составить запрос</a>
+      </div>
+      <img class="hero-image" src="assets/cleaning-wand.webp" width="900" height="1125" alt="Моющий пылесос с металлической насадкой в светлой комнате" fetchpriority="high">
+    </section>
+    <section class="services wrap" id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Что убрать?</h2>
+      <ul class="service-list">
+        <li><a href="#request" data-service="Генеральная уборка"><span>Генеральная уборка</span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="#request" data-service="Уборка после ремонта"><span>Уборка после ремонта</span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="#request" data-service="Регулярная уборка"><span>Регулярная уборка</span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="#request" data-service="Уборка офиса"><span>Уборка офиса</span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="#request" data-service="Мытьё окон"><span>Мытьё окон</span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="#request" data-service="Химчистка мебели и ковров"><span>Химчистка мебели и ковров</span><span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </section>
+    <section id="request" class="request" aria-labelledby="request-title">
+      <div class="request-inner wrap">
+        <div class="request-intro">
+          <h2 id="request-title">Обсудим вашу задачу</h2>
+          <p>Выберите услугу и добавьте детали. Перед отправкой проверьте черновик в Telegram. Стоимость и время можно уточнить в чате.</p>
+          <a href="tel:+79274659599" class="phone">+7 927 465-95-99</a>
+        </div>
+        <form class="request-form" id="request-form">
+          <label for="service">Услуга</label>
+          <select id="service" required>
+            <option value="">Выберите услугу</option>
+            <option>Генеральная уборка</option>
+            <option>Уборка после ремонта</option>
+            <option>Регулярная уборка</option>
+            <option>Уборка офиса</option>
+            <option>Мытьё окон</option>
+            <option>Химчистка мебели и ковров</option>
+          </select>
+          <div id="area-group">
+            <label for="area">Площадь, м² <span>(если известна)</span></label>
+            <input id="area" type="number" inputmode="decimal" min="0.1" max="100000" step="0.1" placeholder="Например, 55">
+          </div>
+          <label for="details">Детали <span>(необязательно)</span></label>
+          <textarea id="details" rows="3" maxlength="400" placeholder="Что нужно убрать?"></textarea>
+          <div class="form-actions">
+            <a id="telegram-link" class="button button-dark" href="https://t.me/buro_cleaning" target="_blank" rel="noopener noreferrer">Открыть Telegram</a>
+            <button class="copy-button" id="copy-text" type="button" hidden>Скопировать текст</button>
+          </div>
+          <p id="copy-status" class="status" role="status"></p>
+          <noscript>В Telegram можно написать запрос вручную.</noscript>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer wrap">
+    <p>Проект страницы Buro Cleaning. Изображение создано для проекта.</p>
+    <a href="https://t.me/s/burocleaning?before=18" target="_blank" rel="noopener noreferrer">Канал компании ↗</a>
+  </footer>
+</body>
+</html>
