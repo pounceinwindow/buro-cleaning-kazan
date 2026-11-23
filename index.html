@@ -7,8 +7,8 @@
   <meta name="description" content="Проект страницы Buro Cleaning. Уборка квартир, домов и офисов, мытьё окон и химчистка в Казани.">
   <meta name="theme-color" content="#f5f8f2">
   <title>Buro Cleaning — уборка в Казани</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=2">
+  <script src="app.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">К содержанию</a>
@@ -23,9 +23,9 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="intro">
       <div class="hero-copy">
-        <h1 id="intro">Уборка для дома и&nbsp;офиса</h1>
-        <p>Генеральная, регулярная или после ремонта. Опишите задачу, чтобы обсудить стоимость с&nbsp;Buro Cleaning.</p>
-        <a class="button button-dark" href="#request">Составить запрос</a>
+        <h1 id="intro">Уборка под&nbsp;вашу задачу</h1>
+        <p>Квартира, офис или помещение после ремонта. Соберите список работ, чтобы обсудить стоимость с&nbsp;Buro Cleaning.</p>
+        <a class="button button-dark" href="#request">Собрать план уборки <span aria-hidden="true">↓</span></a>
       </div>
       <img class="hero-image" src="assets/cleaning-wand.webp" width="900" height="1125" alt="Моющий пылесос с металлической насадкой в светлой комнате" fetchpriority="high">
     </section>
@@ -43,11 +43,16 @@
     <section id="request" class="request" aria-labelledby="request-title">
       <div class="request-inner wrap">
         <div class="request-intro">
-          <h2 id="request-title">Обсудим вашу задачу</h2>
-          <p>Выберите услугу и добавьте детали. Перед отправкой проверьте черновик в Telegram. Стоимость и время можно уточнить в чате.</p>
+          <h2 id="request-title">План вашей уборки</h2>
+          <p>Отметьте, что нужно сделать. Перечень работ и детали попадут в одно сообщение для обсуждения с командой.</p>
+          <div class="plan-summary" aria-live="polite">
+            <p id="plan-title">Выберите тип уборки</p>
+            <p id="plan-note">Подскажем, какие детали стоит указать по этому типу работ.</p>
+            <ul id="plan-items"></ul>
+          </div>
           <a href="tel:+79274659599" class="phone">+7 927 465-95-99</a>
         </div>
-        <form class="request-form" id="request-form">
+        <form class="request-form" id="request-form" aria-label="План уборки">
           <label for="service">Услуга</label>
           <select id="service" required>
             <option value="">Выберите услугу</option>
@@ -58,6 +63,10 @@
             <option>Мытьё окон</option>
             <option>Химчистка мебели и ковров</option>
           </select>
+          <fieldset id="task-group" class="task-group" hidden>
+            <legend>Что обсудить с командой</legend>
+            <div id="task-options" class="task-options"></div>
+          </fieldset>
           <div id="area-group">
             <label for="area">Площадь, м² <span>(если известна)</span></label>
             <input id="area" type="number" inputmode="decimal" min="0.1" max="100000" step="0.1" placeholder="Например, 55">
@@ -65,7 +74,7 @@
           <label for="details">Детали <span>(необязательно)</span></label>
           <textarea id="details" rows="3" maxlength="400" placeholder="Что нужно убрать?"></textarea>
           <div class="form-actions">
-            <a id="telegram-link" class="button button-dark" href="https://t.me/buro_cleaning" target="_blank" rel="noopener noreferrer">Открыть Telegram</a>
+            <a id="telegram-link" class="button button-dark" href="https://t.me/buro_cleaning" target="_blank" rel="noopener noreferrer">Открыть черновик в Telegram</a>
             <button class="copy-button" id="copy-text" type="button" hidden>Скопировать текст</button>
           </div>
           <p id="copy-status" class="status" role="status"></p>
