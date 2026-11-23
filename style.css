@@ -52,12 +52,12 @@ h2 { font-size: clamp(36px, 5vw, 72px); line-height: 1; letter-spacing: -.065em;
 .request-intro p { max-width: 37ch; color: var(--muted); line-height: 1.6; margin: 24px 0; }
 .plan-summary {
   position: relative;
-  width: min(100%, 410px);
+  width: 100%;
   background: #f5f8f2;
   border: 1px solid #a8b8d6;
   border-top: 4px solid var(--blue);
   padding: 20px 22px 17px;
-  margin: 25px 0;
+  margin: 20px 0;
 }
 .plan-summary > p { margin: 0; }
 #plan-title { font-weight: 800; color: var(--ink); font-size: clamp(19px, 2.2vw, 27px); letter-spacing: -.03em; line-height: 1.2; }

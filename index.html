@@ -7,7 +7,7 @@
   <meta name="description" content="Проект страницы Buro Cleaning. Уборка квартир, домов и офисов, мытьё окон и химчистка в Казани.">
   <meta name="theme-color" content="#f5f8f2">
   <title>Buro Cleaning — уборка в Казани</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
   <script src="app.js?v=2" defer></script>
 </head>
 <body>
@@ -45,11 +45,6 @@
         <div class="request-intro">
           <h2 id="request-title">План вашей уборки</h2>
           <p>Отметьте, что нужно сделать. Перечень работ и детали попадут в одно сообщение для обсуждения с командой.</p>
-          <div class="plan-summary" aria-live="polite">
-            <p id="plan-title">Выберите тип уборки</p>
-            <p id="plan-note">Подскажем, какие детали стоит указать по этому типу работ.</p>
-            <ul id="plan-items"></ul>
-          </div>
           <a href="tel:+79274659599" class="phone">+7 927 465-95-99</a>
         </div>
         <form class="request-form" id="request-form" aria-label="План уборки">
@@ -73,6 +68,11 @@
           </div>
           <label for="details">Детали <span>(необязательно)</span></label>
           <textarea id="details" rows="3" maxlength="400" placeholder="Что нужно убрать?"></textarea>
+          <div class="plan-summary" aria-live="polite">
+            <p id="plan-title">Выберите тип уборки</p>
+            <p id="plan-note">Подскажем, какие детали стоит указать по этому типу работ.</p>
+            <ul id="plan-items"></ul>
+          </div>
           <div class="form-actions">
             <a id="telegram-link" class="button button-dark" href="https://t.me/buro_cleaning" target="_blank" rel="noopener noreferrer">Открыть черновик в Telegram</a>
             <button class="copy-button" id="copy-text" type="button" hidden>Скопировать текст</button>
